@@ -15,11 +15,13 @@ https://github.com/user-attachments/assets/74d59f49-266a-497e-b67e-d77e64209026
 
 ## Configuration
 
-Copy or install this plugin and add the following keymap to your `manager.prepend_keymap`:
+Copy or install this plugin and add the following keymap to your keymap.toml:
 
 ```toml
-on = "<C-y>"
-run = ["plugin system-clipboard"]
+[mgr]
+prepend_keymap = [
+	{on = "<C-y>", run = "plugin system-clipboard", desc = "Copy selected files to system clipboard"}
+]
 ```
 
 > [!Tip]
